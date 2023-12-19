@@ -4,16 +4,16 @@ layout: home
 nav_order: 1
 ---
 
-# Lab: Deploying and running Java Applications in Azure Spring Apps Standard
+# Lab: Deploying and running Java Applications in Azure Spring Apps Enterprise
 
-This lab teaches you how to deploy the [Spring Petclinic Microservices](https://github.com/Azure-Samples/java-microservices-asa-standard-lab/tree/main/src) application to an Azure Spring Apps Standard instance and integrate it with additional Azure services.
+This lab teaches you how to deploy the [Spring Petclinic Microservices](https://github.com/Azure-Samples/java-microservices-asa-e-lab/tree/main/src) application to an Azure Spring Apps Enterprise instance and integrate it with additional Azure services.
 
 ## Modules
 
 This lab has modules on:
 
-* Plan a Java application migration to Azure Spring Apps Standard
-* Migrate a Spring Apps microservices application to Azure Spring Apps Standard
+* Plan a Java application migration to Azure Spring Apps Enterprise
+* Migrate a Spring Apps microservices application to Azure Spring Apps Enterprise
 * Enable monitoring and end-to-end tracing
 * Secure application secrets using Key Vault
 * Create and configure Azure Service Bus for sending messages between microservices
@@ -21,7 +21,7 @@ This lab has modules on:
 * Protect endpoints using Web Application Firewalls
 * Secure MySQL database and Key Vault using a Private Endpoint
 
-The lab is available as GitHub pages [here](https://azure-samples.github.io/java-microservices-asa-standard-lab/)
+The lab is available as GitHub pages [here](https://azure-samples.github.io/java-microservices-asa-e-lab/)
 
 ## Getting Started
 
