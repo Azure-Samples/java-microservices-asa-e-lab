@@ -16,14 +16,14 @@ Your team has now stored usernames and passwords in a Key Vault for higher secur
 
 ## Objectives
 
-After you complete this lab, you will be able to:
+After you complete this challenge, you will be able to:
 
 - Delete secrets from Key Vault
 - Create an admin account for the MySQL Flexible Server
 - Create service connections from the microservices to the database server
 - Update the applications to use passwordless connectivity
 
-The below image illustrates the end state you will be building in this lab.
+The below image illustrates the end state you will be building in this challenge.
 
 ![Lab 4 architecture](../images/asa-openlab-4b.png)
 
