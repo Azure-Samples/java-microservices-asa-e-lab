@@ -1,11 +1,11 @@
-title: Java on ASA Standard
+title: Java on ASA Enterprise
 description: This lab walks you through the creation Azure Spring Apps integrated with multiple Azure service, and deploy an application with Front End supported by various backend microservices
 theme: just-the-docs
 
 # url: https://Azure-Samples.github.io/java-microservices-asa-e-lab
 
 aux_links:
-  "Java microservices on Azure Spring Apps Standard on GitHub": 
+  "Java microservices on Azure Spring Apps Enterprise on GitHub": 
     - "https://github.com/Azure-Samples/java-microservices-asa-e-lab"
 
 
