@@ -1,0 +1,54 @@
+az login --use-device-code
+az login
+
+UNIQUEID=<your-unique-id>
+
+APPNAME=petclinic
+RESOURCE_GROUP=rg-$APPNAME-$UNIQUEID
+LOCATION=northeurope
+
+SPRING_APPS_SERVICE=sa-$APPNAME-$UNIQUEID
+az config set defaults.group=$RESOURCE_GROUP defaults.spring=$SPRING_APPS_SERVICE
+
+GIT_REPO=<your-gh-config-repo>
+GIT_USERNAME=<your-gh-username>
+GIT_PASSWORD=<your-gh-PAT>
+
+API_GATEWAY=api-gateway
+ADMIN_SERVER=admin-server
+CUSTOMERS_SERVICE=customers-service
+VETS_SERVICE=vets-service
+VISITS_SERVICE=visits-service
+
+VERSION=3.0.2
+API_GATEWAY_JAR=spring-petclinic-api-gateway/target/spring-petclinic-api-gateway-$VERSION.jar
+ADMIN_SERVER_JAR=spring-petclinic-admin-server/target/spring-petclinic-admin-server-$VERSION.jar
+CUSTOMERS_SERVICE_JAR=spring-petclinic-customers-service/target/spring-petclinic-customers-service-$VERSION.jar
+VETS_SERVICE_JAR=spring-petclinic-vets-service/target/spring-petclinic-vets-service-$VERSION.jar
+VISITS_SERVICE_JAR=spring-petclinic-visits-service/target/spring-petclinic-visits-service-$VERSION.jar
+
+MYSQL_SERVER_NAME=mysql-$APPNAME-$UNIQUEID
+MYSQL_ADMIN_USERNAME=myadmin
+MYSQL_ADMIN_PASSWORD=<your-admin-pw>
+DATABASE_NAME=petclinic
+
+KEYVAULT_NAME=kv-$APPNAME-$UNIQUEID
+
+SERVICEBUS_NAMESPACE=sb-$APPNAME-$UNIQUEID
+
+DB_ADMIN_USER_ASSIGNED_IDENTITY_NAME=uid-dbadmin-$APPNAME-$UNIQUEID
+
+ADMIN_IDENTITY_RESOURCE_ID=$(az identity show \
+ --name $DB_ADMIN_USER_ASSIGNED_IDENTITY_NAME \
+ --resource-group $RESOURCE_GROUP \
+ --query id \
+ --output tsv)
+
+SUBID=$(az account show --query id -o tsv)
+
+MESSAGING_EMULATOR=messaging-emulator
+MESSAGING_EMULATOR_JAR=spring-petclinic-messaging-emulator/target/spring-petclinic-messaging-emulator-$VERSION.jar
+
+VM_ADMIN=<vm-admin-username>
+VM_PASS=<vm-admin-password>
+
